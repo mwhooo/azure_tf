@@ -1,0 +1,8 @@
+Prepare for TF
+
+	- first we download the terrafrom zip
+	- extract the tf binaries
+	- download az commandline installer
+	- install silently
+	- add TF binary location to user path variable
+
