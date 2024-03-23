@@ -11,9 +11,9 @@ provider "azurerm" {
   features {}
 }
 
-terraform {
-  backend "local" {
-    path = "D:/__DEMOS/terraform.tfstate.d/rg/terraform.tfstate"
-    workspace_dir = "D:/__DEMOS/terraform.tfstate.d/rg"
-  }
-}
+# terraform {
+#   backend "local" {
+#     path = "D:/__DEMOS/terraform.tfstate.d/rg/terraform.tfstate"
+#     workspace_dir = "D:/__DEMOS/terraform.tfstate.d/rg"
+#   }
+# }

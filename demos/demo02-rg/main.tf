@@ -5,32 +5,3 @@ resource "azurerm_resource_group" "rg" {
   tags       = var.rg_tags
   managed_by = var.managed_by
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# module "global_vars" {
-#    source = "../modules/global/${var.env}"
-# }
