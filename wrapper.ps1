@@ -7,6 +7,7 @@ param(
 
 try {
     Set-Location $tf_state -ErrorAction Stop #change to the tf state folder
+    terraform.exe init
 }
 catch {
     Write-Error "Could change to path: $tf_state, please provide a valid folder name where a main.tf is located."
