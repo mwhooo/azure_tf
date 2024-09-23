@@ -18,14 +18,14 @@ resource "azurerm_subnet" "windows_subnet" {
   name                 = var.windows_subnet
   resource_group_name  = data.azurerm_resource_group.rg.name
   virtual_network_name = azurerm_virtual_network.this.name
-  address_prefixes     = [cidrsubnet(var.address_space, 8, 5)] # 8 bits on top of addrespace (/16) and last number is the actual subnet 10.0.5.0/24 in this example
+  address_prefixes     = [cidrsubnet(var.address_space, var.subnet_bits, var.windows_bits)] # 8 bits on top of addrespace (/16) and last number is the actual subnet 10.0.5.0/24 in this example
 }
 
 resource "azurerm_subnet" "linux_subnet" {
   name                 = var.linux_subnet
   resource_group_name  = data.azurerm_resource_group.rg.name
   virtual_network_name = azurerm_virtual_network.this.name
-  address_prefixes     = [cidrsubnet(var.address_space, 8, 4)] # 8 bits on top of addrespace (/16) and last number is the actual subnet 10.0.4.0/24 in this example
+  address_prefixes     = [cidrsubnet(var.address_space, var.subnet_bits, var.linux_bits)] # 8 bits on top of addrespace (/16) and last number is the actual subnet 10.0.4.0/24 in this example
 }
 
 resource "azurerm_network_security_group" "windows" {

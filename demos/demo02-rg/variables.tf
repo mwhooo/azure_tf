@@ -8,7 +8,7 @@ variable "rg_location" {
   description = "Location of the resource group."
 }
 
-variable "rg_tags" {
+variable "tags" {
   type  = map(string)
   description = "Tags for RG"
 }
