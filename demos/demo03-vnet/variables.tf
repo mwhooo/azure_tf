@@ -2,11 +2,11 @@ variable "rg_name" {
   type = string
 }
 
-variable "windows_subnet" {
+variable "windows_subnet_name" {
   type = string
 }
 
-variable "linux_subnet" {
+variable "linux_subnet_name" {
   type = string
 }
 
@@ -34,3 +34,12 @@ variable "linux_bits" {
   type        = number
 }
 
+variable "storage_bits" {
+  description = "The specific subnet number"
+  type        = number
+}
+
+variable "storage_subnet_name" {
+  description = "Name for the storagesubnet"
+  type = string
+}

@@ -47,12 +47,13 @@ $var_file = "$scriptPath\$target_env.tfvars"
 $r = terraform plan -var-file "$var_file" -json | 
      convertfrom-json | Where-Object type -eq change_summary
 
-# i hate string parsing of the bottom of heart, dont understand why people still like this. but have no choice with TF
+# need to check for destoys, need to prompt for that with overview and such
 if($r.changes.change -eq 0 -and $r.changes.add -eq 0 -and $r.changes.remove -eq 0 -and $r.changes.import -eq 0 -and $action -ne 'destroy'){
     Write-Output "Skipping due to no changes"
 }
 else { # means we do a destroy
     write-output "Running $action!"
+    $r.changes
     terraform $action -var-file "$var_file" -auto-approve -compact-warnings
 }
 
