@@ -34,12 +34,26 @@ variable "linux_bits" {
   type        = number
 }
 
-variable "storage_bits" {
+variable "general_bits" {
   description = "The specific subnet number"
   type        = number
 }
 
-variable "storage_subnet_name" {
-  description = "Name for the storagesubnet"
-  type = string
+variable "gateway_bits" {
+  description = "The subnet number"
+  type        = number
+}
+variable "general_subnet_name" {
+  description = "Name for the general azure resource like, kv, storage, etc"
+  type        = string
+}
+
+variable "gateway_subnet_name" {
+  description = "Name for the subnet gateway, azure only accept 1 default name for the subnet"
+  type        = string
+}
+
+variable "ports_windows" {
+  type    = list(number)
+  default = [443, 3389]
 }

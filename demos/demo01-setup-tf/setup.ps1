@@ -2,8 +2,8 @@
 # extract it to a location where you want to run it
 # append path to path variable for user
 # check if az exist, if not needs to be downloaded and installed as well.
-param(
-    [Parameter(Mandatory=$false)][string] $tf_url = "https://releases.hashicorp.com/terraform/1.7.4/terraform_1.7.4_windows_amd64.zip",
+param (
+    [Parameter(Mandatory=$false)][string] $tf_url = "https://releases.hashicorp.com/terraform/1.9.7/terraform_1.9.7_windows_amd64.zip",
     [Parameter(Mandatory=$false)][string] $tf_location = "D:\Terraform",
     [Parameter(Mandatory=$false)][string] $az_url = "https://aka.ms/installazurecliwindowsx64"
 )

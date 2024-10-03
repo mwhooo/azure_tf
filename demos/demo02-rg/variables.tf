@@ -9,11 +9,11 @@ variable "rg_location" {
 }
 
 variable "tags" {
-  type  = map(string)
+  type        = map(string)
   description = "Tags for RG"
 }
 
 variable "managed_by" {
-  type = string
+  type        = string
   description = "RG Managing person"
 }
